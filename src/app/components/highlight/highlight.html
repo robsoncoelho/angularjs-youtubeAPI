@@ -1,0 +1,14 @@
+<div class="box-size" ng-controller="HighlightController as vm">
+  <a ng-if="view.modal" id="close" ng-click="view.close()" href="#"><i></i></a>
+  <div class="margin">
+    <iframe width="100%" height="400" ng-src="{{ view.currentVideo.url }}" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div ng-click="vm.openReadMore()" class="border padding box-shadow" ng-class="vm.readMore">
+    <h3 ng-bind="view.currentVideo.snippet.title"></h3>
+    <div class="icons">
+      <i class="icon-views" popover-class="popoverWhite" popover-trigger="mouseenter" popover-append-to-body="true" uib-popover="{{view.currentVideo.views}} views"></i>
+      <i class="icon-date" popover-class="popoverWhite" popover-trigger="mouseenter" popover-append-to-body="true" uib-popover="{{ view.currentVideo.snippet.publishedAt | date:'longDate' }}"></i> 
+    </div>
+    <p ng-bind="view.currentVideo.snippet.description"></p>
+  </div>
+</div>

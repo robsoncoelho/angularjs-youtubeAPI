@@ -1,0 +1,56 @@
+/**
+ *  If you want to override some bootstrap variables, you have to change values here.
+ *  The list of variables are listed here bower_components/bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss
+ */
+$red-color: #a8395c;
+$active-color: #932d4d;
+$gray-color: #c8c8c8;
+$gray-color-light: #e6e6e6;
+$text-default-color: #4c4c4c;
+$icon-font-path: "../../bootstrap-sass/assets/fonts/bootstrap/";
+
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+body{
+  	padding-bottom: 40px;
+}
+
+h1, h2 {
+    font-family: 'Titillium Web', sans-serif;
+    color: $red-color;
+    font-size: 2.3em;
+	margin: 0;
+	line-height: 1.25em;
+}
+
+.column {
+	.margin {
+		margin-bottom: 20px;
+	}
+	.border {
+		display: block;
+		border: 1px solid $gray-color;
+		border-bottom: 3px solid $gray-color;
+	}
+	.padding {
+		padding: 1.6em;
+	}
+}
+
+@media (max-width: 480px) {
+	h1, h2 {
+		font-size: 1.5em;
+	}
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

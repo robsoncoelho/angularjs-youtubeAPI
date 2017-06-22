@@ -1,0 +1,21 @@
+#mainPage {
+	p {
+		font-family: 'Lato', sans-serif;
+		font-size: 1em;
+		color: $text-default-color;
+	}
+	.box-size{
+		height: 595px;
+	}
+}
+
+@media (max-width: 480px) {
+	#mainPage {
+		.box-size{
+			height: auto;
+		}
+		> div{
+			margin-bottom: 20px;
+		}
+	}
+}

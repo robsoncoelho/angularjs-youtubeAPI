@@ -1,0 +1,28 @@
+<nav class="navbar navbar-static-top" ng-controller="NavbarController as navbar">
+  <div class="container">
+    <div class="col-sm-12 col-md-12">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <img src="assets/images/logo.png" />
+        </a>
+      </div>
+      <ul class="nav navbar-nav pull-right" uib-dropdown>
+        <a id="simple-dropdown" uib-dropdown-toggle role="button"><i class="icon-menu"></i></a>
+        <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="simple-dropdown">
+          <li><a ng-href="/"><i class="icon-destaques"></i>Destaques</a></li>
+          <li><a ng-href="/videos"><i class="icon-videos"></i>Vídeos</a></li>
+        </ul>
+      </ul>
+      <div class="col-sm-4 col-md-4 pull-right">
+        <div class="input-group pull-right" ng-class="navbar.searchField ? 'opened' : 'closed'">
+          <div class="searchInput">
+            <input type="text" ng-model="navbar.keyword" class="form-control" name="srch-term" id="srch-term">
+          </div>
+          <div class="input-group-btn">
+            <button ng-click="navbar.searchBox()" ng-class="navbar.keyword.length > 1 ? 'enable' : 'disable'" class="btn btn-default"><i class="icon-search"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

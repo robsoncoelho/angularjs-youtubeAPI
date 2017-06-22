@@ -1,0 +1,21 @@
+<div id="list-videos" ng-controller="ListController as vm">
+  <div class="list">
+    <div ng-repeat="video in view.youtube" class="col-sm-12 col-md-12">
+      <div class="row">
+        <div class="video col-sm-6 col-md-4" ng-repeat="item in video.items" ng-click="vm.getVideo($parent.$index, $index); view.openModal('.modal-parent')">
+          <div class="thumb">
+            <img class="img-responsive" alt="{{item.snippet.title}}" ng-src="{{item.snippet.thumbnails.medium.url}}" width="100%" height="auto" />
+          </div>
+          <div class="details">
+            <h4 class="title"><span ng-bind="item.snippet.title | limitTo:35"></span><span ng-if="item.snippet.title.length > 35">...</span></h4>
+            <p ng-if="item.views" class="views">{{ item.views | thousandSuffix }} views</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="more-videos col-sm-offset-3 col-sm-6 col-md-offset-3 col-md-6">
+    <button ng-if="!vm.isLoading" ng-click="vm.loadVideos(view.youtube[view.youtube.length-1].nextPageToken)" class="btn btn-default">Carregar mais vídeos...</button>
+    <img ng-if="vm.isLoading" class="loading" src="assets/images/loading.gif" width="25px" height="25px" />
+  </div>
+</div>
