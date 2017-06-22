@@ -13,6 +13,9 @@
 	    flex-basis: 95%;
 	    margin-bottom: 1em;
 	    overflow: auto;
+	    > div{
+	    	padding: 0;
+	    }
 		.video{
 			&:hover{
 				.thumb{
