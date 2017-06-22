@@ -8,5 +8,4 @@ Build the project:
 <pre>gulp serve</pre>
 
 * gulp serve:dist to build a version ready for production deployment
-</pre>
 </bloquote>
