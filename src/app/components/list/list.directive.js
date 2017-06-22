@@ -18,9 +18,7 @@
     return directive;
 
     /** @ngInject */
-    function ListController() {
-      
-    }
+    function ListController() {}
   }
 
   function allVideos() {
@@ -34,8 +32,6 @@
     return directive;
 
     /** @ngInject */
-    function ListController() {
-      
-    }
+    function ListController() {}
   }
 })();

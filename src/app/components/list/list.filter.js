@@ -4,7 +4,7 @@
 		.module('ytVideoChannel')
 		.filter('thousandSuffix', thousandSuffix)
 
-  /** @ngInject */
+	/** @ngInject */
 	function thousandSuffix($window) {
 		return function(input, decimals) {
 			var exp, rounded,

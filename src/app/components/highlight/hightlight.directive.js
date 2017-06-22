@@ -18,12 +18,7 @@
     return directive;
 
     /** @ngInject */
-    function HighlightController() {
-      // var vm = this;
-
-      // "vm.creationDate" is available by directive option "bindToController: true"
-      // vm.relativeDate = moment(vm.creationDate).fromNow();
-    }
+    function HighlightController() {}
   }
 
 })();

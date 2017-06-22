@@ -12,7 +12,7 @@
     vm.searchField = false;
     vm.keyword = "";
 
-    vm.searchBox = function(event){
+    vm.searchBox = function(){
       if(vm.searchField != true){
         vm.searchField = true;
         $element[0].querySelector("#srch-term").focus();
